@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="cck_field_validation" version="2.5" method="upgrade">
+	<name>plg_cck_field_validation_cpf</name>
+	<author>Leandro Cunha</author>
+	<authorEmail>leandrocunha01@gmail.com</authorEmail>
+	<authorUrl>http://lablivre.org</authorUrl>
+	<copyright>Lablivre . All Rights Reserved.</copyright>
+	<license>GNU General Public License version 2 or later.</license>
+	<creationDate>December 2014</creationDate>
+	<description>Plugin para Validação de CPF e CNPJ</description>
+	<version>1.0.0</version>
+	
+	<scriptfile>install/script.php</scriptfile>
+	
+	<files>
+		<folder>install</folder>
+		<folder>tmpl</folder>
+		<folder>includes</folder>
+		<filename>includes/class_VALIDATE.php</filename>
+		<filename plugin="cpf">cpf.php</filename>
+		<filename>index.html</filename>
+	</files>
+	
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.plg_cck_field_validation_cpf.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_cck_field_validation_cpf.sys.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_cck_field_validation_cpf.ini</language>
+		<language tag="pt-BR">pt-BR/pt-BR.plg_cck_field_validation_cpf.sys.ini</language>
+	</languages>
+	
+	<config>
+		<fields name="params" addfieldpath="/libraries/cck/construction/field">
+			<fieldset name="basic">
+				<field name="alert" type="text" default="PLG_CCK_FIELD_VALIDATION_CPF_ALERT" label="LIB_CCK_ALERT_LABEL" size="60" description="LIB_CCK_FIELD_VALIDATION_ALERT_DESC" disabled="true" />
+			</fieldset>
+			
+			<fieldset name="advanced">
+				<field name="group" type="text" default="PLG_CCK_FIELD_VALIDATION_GROUP_CONTACT" label="LIB_CCK_GROUP_LABEL" size="60" description="LIB_CCK_FIELD_VALIDATION_GROUP_DESC" />
+				<field name="export" type="cckexport" default="" label="LIB_CCK_EXPORT_LABEL" description="LIB_CCK_FIELD_VALIDATION_EXPORT_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>
